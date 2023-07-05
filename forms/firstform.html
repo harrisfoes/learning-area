@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+
+<body>
+    <form action="/my-handling-form-page" method="post">
+        <fieldset>
+            <ul>
+                <legend>Contact</legend>
+                <li>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" name="user_name">
+                </li>
+                <li>
+                    <label for="mail">Email:</label>
+                    <input type="email" id="mail" name="user_email">
+                </li>
+                <li>
+                    <label for="msg">Message:</label>
+                    <textarea name="user_message" id="msg" cols="30" rows="10">
+                        this is the default text
+                    </textarea>
+                </li>
+                <li>
+                    <button type="submit">Send your message</button>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+
+    <form action="mynation.php" method="get">
+        <fieldset>
+        <ul>
+            <legend>Sponge</legend>
+            <li>
+                <label for="fname">First Name: </label>
+                <input type="text" id="fname" name="fname" placeholder="spongey" required>
+            </li>
+            <li>
+                <label for="lname">Last Name: </label>
+                <input type="text" id="lname" name="lname" placeholder="wongey" required>
+            </li>
+            <li>
+                <label for="pword">Password: </label>
+                <input type="password" id="pword" name="pword" required>
+            </li>
+            <li>
+                <label for="phone">Phone number: </label>
+                <input type="text" name="phone" id="phone" placeholder="(032)-123-4567" minlength="3" maxlength="10">
+            </li>
+            <li>
+                <button type="submit">Send this to the underworld!</button>
+            </li>
+        </ul>
+        </fieldset>
+    </form>
+</body>
+
+</html>

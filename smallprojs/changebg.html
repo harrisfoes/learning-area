@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random color creator</title>
+
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: #D0D0D0;
+        }
+
+        .center{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        nav{
+            height: 300px;
+        }
+        footer{
+            height: 300px;
+        }
+    </style>
+    
+    <nav></nav> 
+    <div class="center">
+        <input class="button" type="button" id="btn" value="Click Me!">
+    </div>
+    <footer></footer>
+
+</body>
+<script>
+    const button = document.querySelector('#btn');
+    const body = document.querySelector('body');
+
+
+    button.addEventListener('click', function () {
+
+        var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+
+        console.log('ayo papi');
+        body.style.backgroundColor = '#' + randomColor;
+    });
+</script>
+
+</html>
