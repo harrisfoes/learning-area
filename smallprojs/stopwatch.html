@@ -8,58 +8,163 @@
     <style>
         * {
             margin: 0px;
-            border: solid gray 1px;
+            //border: solid gray 1px;
         }
 
-        body{
-            height:125vh;
-            display:flex;
+        body {
+            height: 125vh;
+            display: flex;
             flex-direction: column;
-            
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 2rem;
+            background-color: #181322
         }
 
         nav {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height:30px;
-            background-color: gray;
+            height: 50px;
+            background-color: #a2423a;
+            color: #cdc1a7;
         }
 
-        nav li{
+        nav li {
             margin: 20px;
             display: inline;
         }
 
-        .main{
-            margin-top: 30px;
-        
+        .main {
+            margin-top: 25vh;
+            text-align: center;
+            background-color: #181322;
+            color: #cdc1a7;
+            padding: 32px;
         }
-        
-        </style>
+
+        .main div {
+            padding: 8px;
+        }
+
+        .timer {
+            font-size: 5rem;
+        }
+
+        .buttons li {
+            display: inline;
+            padding: 4px;
+        }
+
+        .main button {
+            height: 40px;
+            width: 200px;
+            font-size: 1.2rem;
+            background-color: #a2423a;
+            color: #cdc1a7;
+            border-radius: 20px;
+        }
+
+        .digit{
+            margin:4px;
+            padding:4px;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-    <nav>
-        <ul>
-            <li>Home</li>
-            <li>Contact us</li>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Contact us</li>
+            </ul>
+        </nav>
     </header>
     <div class="main">
         <div class="banner">This is a Stopwatch</div>
-        <div class="timer">0:00</div>
+        <div class="timer">
+            <span id="hour" class="digit">00</span>
+            <span>:</span>
+            <span id="min" class="digit">00</span>
+            <span>:</span>
+            <span id="sec" class="digit">00</span>
+            <span>:</span>
+            <span id="count" class="digit">00</span>
+        </div>
         <div class="buttons">
             <ul>
-                <li>Start</li>
-                <li>Stop</li>
-                <li>Reset</li>
+                <li><button id="start">Start</button></li>
+                <li><button id="stop">Stop</button></li>
+                <li><button id="reset">Reset</button></li>
             </ul>
         </div>
     </div>
     <footer></footer>
+    <script>
+
+        const start = document.querySelector('#start');
+        const reset = document.querySelector('#reset');
+        const stop = document.querySelector('#stop');
+
+        let timer = false;
+        let count = 0;
+        let secs = 0;
+        let min = 0;
+        let hour = 0;
+
+        start.addEventListener('click', function () {
+            console.log('start');
+            timer = true;
+            startTimer();
+        });
+
+        stop.addEventListener('click', function(){
+            timer = false;
+        });
+
+        reset.addEventListener('click', function(){
+            timer = false;
+            count = 0;
+            secs = 0;
+            min = 0;
+            hour = 0;
+
+            document.querySelector("#count").innerHTML = count.toString().padStart(2, '0');
+            document.querySelector("#sec").innerHTML = secs.toString().padStart(2, '0');
+            document.querySelector("#min").innerHTML = min.toString().padStart(2, '0');
+            document.querySelector("#hour").innerHTML = hour.toString().padStart(2, '0');
+            
+        });
+
+        function startTimer() {
+
+            if (timer) {
+                count++;
+
+                if (count == 100) {
+                    secs++;
+                    count = 0
+                }
+
+                if (secs == 60){
+                    min++;
+                    secs = 0
+                }
+
+                if( min == 60){
+                    hour++;
+                    min = 0
+                }
+
+                document.querySelector("#count").innerHTML = count.toString().padStart(2, '0');
+                document.querySelector("#sec").innerHTML = secs.toString().padStart(2, '0');
+                document.querySelector("#min").innerHTML = min.toString().padStart(2, '0');
+                document.querySelector("#hour").innerHTML = hour.toString().padStart(2, '0');
+                setTimeout(startTimer, 10);
+            }
+        }
+
+    </script>
 </body>
 
 </html>
