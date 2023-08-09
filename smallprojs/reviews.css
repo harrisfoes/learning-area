@@ -1,0 +1,68 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Montserrat:wght@400;500&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Dosis', sans-serif;
+}
+
+section {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:16px;
+    height: 100vh;
+}
+
+article {
+    text-align:center;
+    max-width: 45vh;
+}
+
+.title {
+    font-weight:800;
+    font-size:2rem;
+    padding:18px;
+}
+
+.name {
+    font-weight:500px;
+    font-size: 1.6rem;
+    padding:12px;
+    padding-bottom:4px;
+}
+
+.role {
+    color:cadetblue;
+    padding-bottom:16px;
+}
+
+.review {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin:12px;
+
+}
+
+button {
+    margin:4px;
+    padding:12px;
+}
+
+.button {
+    border-radius: 50%;
+    width:8vw;
+    height:8vw;
+    border:none;
+}
+
+.random{
+    border-radius:10px;
+    border:none;
+    font-size:1rem;
+}
