@@ -55,20 +55,22 @@ const p_name = document.querySelector('div.name');
 const p_role = document.querySelector('div.role');
 const p_review = document.querySelector('div.review');
 
-function updateItem(currentRevj){
+function updateItem(currentRev){
+    console.log(currentRev);
     p_image.innerHTML = review[currentRev].image
     p_name.textContent = review[currentRev].name
     p_role.textContent = review[currentRev].role
     p_review.textContent = review[currentRev].review
 }
 
-const generateRandomBetween = (min, max, exclude) => {
+function generateRandomBetween(min, max, exclude){
     let ranNum = Math.floor(Math.random() * (max - min)) + min;
 
     if (ranNum === exclude) {
         ranNum = generateRandomBetween(min,max,exclude);
     }
-
+    
+    console.log(ranNum);
     return ranNum;
 }
 
@@ -97,5 +99,7 @@ nextButton.addEventListener('click', function(){
 });
 
 random.addEventListener('click', function(){
-    console.log("random");
+    const randnum = generateRandomBetween(0,review.length - 1,currentRev)
+    console.log(`rando san ${randnum}`)
+    updateItem(randnum);
 });

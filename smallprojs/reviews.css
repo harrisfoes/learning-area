@@ -9,6 +9,7 @@
 
 body {
     font-family: 'Dosis', sans-serif;
+    background-color: lavender
 }
 
 section {
@@ -22,6 +23,8 @@ section {
 article {
     text-align:center;
     max-width: 45vh;
+    background-color:white;
+    padding:12px;
 }
 
 .title {
