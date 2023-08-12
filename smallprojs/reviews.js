@@ -44,7 +44,7 @@ const review = [
     }
 ]
 
-let currentRev = 0;
+let currentRev;
 
 const prevButton = document.getElementById('previous');
 const nextButton = document.getElementById('next');
@@ -65,16 +65,17 @@ function updateItem(currentRev){
 
 function generateRandomBetween(min, max, exclude){
     let ranNum = Math.floor(Math.random() * (max - min)) + min;
-
+    console.log(`exclude: ${exclude} ranNum = ${ranNum}`)
     if (ranNum === exclude) {
+        console.log("exception caught")
         ranNum = generateRandomBetween(min,max,exclude);
     }
     
-    console.log(ranNum);
     return ranNum;
 }
 
 window.addEventListener('DOMContentLoaded', function(){
+    currentRev = 0;
     updateItem(0);
 });
 
@@ -100,6 +101,6 @@ nextButton.addEventListener('click', function(){
 
 random.addEventListener('click', function(){
     const randnum = generateRandomBetween(0,review.length - 1,currentRev)
-    console.log(`rando san ${randnum}`)
+    currentRev = randnum;
     updateItem(randnum);
 });
