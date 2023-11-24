@@ -1,0 +1,40 @@
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+  font-size: 21px;
+}
+
+.container {
+  background: #23424a;
+  color: white;
+  padding: 100px 0;
+}
+
+.hero__text h1 {
+  font-weight: bold;
+  font-size: 2.8rem;
+}
+
+.hero__text {
+  width: 80%;
+}
+
+.hero__text p {
+  margin-bottom: 4rem;
+}
+
+button {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: inherit;
+  text-transform: uppercase;
+  background: #38cfd9;
+  border: 0;
+  border-radius: 100px;
+  padding: 0.8em 1.8em;
+}
+
+button:focus,
+button:hover {
+  opacity: 0.75;
+}
