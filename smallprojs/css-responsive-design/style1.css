@@ -4,19 +4,20 @@ body {
   font-size: 21px;
 }
 
-.container {
+.hero {
   background: #23424a;
   color: white;
   padding: 100px 0;
+}
+.container {
+  width: 80%;
+  max-width: 650px;
+  margin: 0 auto;
 }
 
 .hero__text h1 {
   font-weight: bold;
   font-size: 2.8rem;
-}
-
-.hero__text {
-  width: 80%;
 }
 
 .hero__text p {
