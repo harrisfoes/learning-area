@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+      .blinking {
+        animation: blink 0.5s infinite;
+      }
+
+      @keyframes blink {
+        0% {
+          visibility: hidden;
+        }
+        50% {
+          visibility: visible;
+        }
+        100% {
+          visibility: hidden;
+        }
+      }
+    </style>
+    <title>Blinking Text</title>
+  </head>
+  <body>
+    <div id="yourTextId">Blinking Text</div>
+
+    <script>
+      const blinkingText = $("#yourTextId");
+
+      function blink() {
+        blinkingText.toggleClass("blinking");
+      }
+
+      setInterval(blink, 1000); // 1000 milliseconds (adjust as needed)
+    </script>
+  </body>
+</html>

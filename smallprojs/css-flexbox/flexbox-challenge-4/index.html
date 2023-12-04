@@ -4,43 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
-      <p>Lorem ipsum sit</p>
-      <h1>Responsive layouts don't have to be a struggle</h1>
+    <main class="hero">
+      <div class="hero__container">
+        <p class="hero__subtext">Lorem ipsum sit</p>
+        <h1 class="hero__header">
+          Responsive layouts don't have to be a struggle
+        </h1>
+      </div>
     </main>
     <section class="quality-designs">
-      <h1>Quality Designs</h1>
-      <div class="left-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab minus
-        pariatur velit neque non labore, dolorem vero in quidem distinctio esse
-        culpa fugiat necessitatibus repellendus dignissimos id natus unde
-        voluptas.
-      </div>
-      <div class="right-text">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque quasi
-        laborum officia voluptatum, dicta perferendis ipsum dolor doloremque
-        inventore temporibus.
+      <h2 class="qd__header">Quality Designs</h2>
+      <div class="container">
+        <div class="left-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab minus
+          pariatur velit neque non labore, dolorem vero in quidem distinctio
+          esse culpa fugiat necessitatibus repellendus dignissimos id natus unde
+          voluptas.
+        </div>
+        <div class="right-text">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque quasi
+          laborum officia voluptatum, dicta perferendis ipsum dolor doloremque
+          inventore temporibus.
+        </div>
       </div>
     </section>
     <section class="custom-copy">
-      <div class="custom-copy--left">
-        <h1>Made custom for you</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-          explicabo possimus quis! Architecto, quaerat suscipit?
-        </p>
+      <div class="container">
+        <div class="custom-copy__left">
+          <h1>Made custom for you</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            explicabo possimus quis! Architecto, quaerat suscipit?
+          </p>
+        </div>
+        <div>
+          <img src="images/image-01.jpg" alt="desert sun" class="copyimg" />
+        </div>
       </div>
     </section>
     <section class="care-copy">
-      <h1>Created with care</h1>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur
-        vitae officiis consequatur, soluta iste architecto impedit culpa
-        inventore quos esse.
-      </p>
+      <div class="container">
+        <div>
+          <img src="images/image-02.jpg" alt="image-2" class="copyimg" />
+        </div>
+        <div class="care-copy__right">
+          <h1>Created with care</h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Consectetur vitae officiis consequatur, soluta iste architecto
+            impedit culpa inventore quos esse.
+          </p>
+        </div>
+      </div>
     </section>
   </body>
 </html>
