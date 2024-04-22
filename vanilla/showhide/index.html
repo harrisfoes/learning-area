@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Show hide</title>
+    <style>
+      body {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 40em;
+        width: 88%;
+      }
+      div {
+        background-color: yellow;
+        padding: 12px 4px 4px 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="(clickButton())">Show</button>
+    <div style="display: none">This is the text that needs to be hidden</div>
+
+    <script>
+      const div = document.querySelector("div");
+
+      const btn = document.querySelector("button");
+
+      function clickButton() {
+        if (div.style.display == "none") {
+          div.style.display = "block";
+          btn.innerHTML = "Hide";
+        } else {
+          div.style.display = "none";
+          btn.innerHTML = "Show";
+        }
+      }
+    </script>
+  </body>
+</html>
